@@ -1,0 +1,21 @@
+This is a project in the works let me know what I can make better.
+
+In the menu admin screen:
+
+1. Create a menu item and save it. ( do not add the $ or () )
+2. Open the item and enter the name of your conditional in the conditional field.
+3. Save the menu.
+
+On the front end we do it like this (must come after the menu at this time):
+
+	<?php wp_nav_menu('nav'); ?>
+	<?php global $is_mypage; //your conditional would have been is_mypage ?>
+	<?php if($is_mypage): ?>
+			<?="this is my page"; ?>
+			<div>Super fancy time.</div>
+	<?php endif; ?>
+	
+	<?php global $a_post;  //your conditional would have been a_post ?>
+	<?php if($a_post): ?>
+			<?= "this is my post";?>
+	<?php endif; ?>
